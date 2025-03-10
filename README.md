@@ -9,8 +9,6 @@ This repository contains the implementation of a generative adversarial network 
 - Dataset
 - Training the Model
 - Generating Images
-- Model Evaluation
-- Licensing
 
 # Overview
 This project uses StyleGAN3, a powerful architecture for generating high-quality, realistic images. The goal is to generate anime-style faces that resemble the aesthetic of popular anime characters.
@@ -28,16 +26,22 @@ The process involves:
 git clone https://github.com/your-username/anime-face-gan.git
 cd anime-face-gan
 ```
-## 2. Install Dependencies
-```
-python3 -m venv stylegan3-env
-source stylegan3-env/bin/activate
-pip install -r requirements.txt
-```
-## 3. Install StyleGAN3
+Now you have the jupyter notebook
+
+## 2. Install StyleGAN3
 ```
 git clone https://github.com/NVlabs/stylegan3.git
 cd stylegan3
-pip install -r requirements.txt
 ```
+## 3. Create conda environment
+```
+conda env create -f environment.yml
+```
+This will:
 
+- Read the environment.yml file.
+- Install the specified dependencies and libraries in the environment.
+```
+conda activate <environment_name>
+```
+Replace <environment_name> with the name of the environment specified in the environment.yml file. In our case environment name is stylegan3.
