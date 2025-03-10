@@ -24,7 +24,7 @@ The process involves:
 
 # Installation
 ## 1. Clone the repository
-git clone https://github.com/your-username/anime-face-gan.git
+'''git clone https://github.com/your-username/anime-face-gan.git
 cd anime-face-gan
 
 ## 2. Install Dependencies
