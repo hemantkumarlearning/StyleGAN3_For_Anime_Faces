@@ -24,7 +24,20 @@ The process involves:
 
 # Installation
 ## 1. Clone the repository
-```git clone https://github.com/your-username/anime-face-gan.git
+```
+git clone https://github.com/your-username/anime-face-gan.git
 cd anime-face-gan
-
+```
+## 2. Install Dependencies
+```
+python3 -m venv stylegan3-env
+source stylegan3-env/bin/activate
+pip install -r requirements.txt
+```
+## 3. Install StyleGAN3
+```
+git clone https://github.com/NVlabs/stylegan3.git
+cd stylegan3
+pip install -r requirements.txt
+```
 
