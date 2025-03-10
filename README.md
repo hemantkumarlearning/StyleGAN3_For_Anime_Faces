@@ -4,13 +4,13 @@ This repository contains the implementation of a generative adversarial network 
 ![Screenshot 2025-03-10 124014](https://github.com/user-attachments/assets/10241780-2ebe-4a17-b80b-2599d7e28049)
 
 # Table of Contents
--Overview
--Installation
--Dataset
--Training the Model
--Generating Images
--Model Evaluation
--Licensing
+- Overview
+- Installation
+- Dataset
+- Training the Model
+- Generating Images
+- Model Evaluation
+- Licensing
 
 # Overview
 This project uses StyleGAN3, a powerful architecture for generating high-quality, realistic images. The goal is to generate anime-style faces that resemble the aesthetic of popular anime characters.
