@@ -1,5 +1,5 @@
 # Anime Face GAN using StyleGAN3
-This repository contains the implementation of a generative adversarial network (GAN) model trained to generate high-quality anime faces. The model is built using StyleGAN3, a state-of-the-art generative model for high-quality image synthesis. The dataset used for training consists of various anime face images sourced from Kaggle.
+This repository contains the implementation of a generative adversarial network (GAN) model trained to generate high-quality anime faces on google colab. The model is built using StyleGAN3, a state-of-the-art generative model for high-quality image synthesis. The dataset used for training consists of various anime face images sourced from Kaggle.
 
 ![Screenshot 2025-03-10 124014](https://github.com/user-attachments/assets/10241780-2ebe-4a17-b80b-2599d7e28049)
 
@@ -33,15 +33,31 @@ Now you have the jupyter notebook
 git clone https://github.com/NVlabs/stylegan3.git
 cd stylegan3
 ```
-## 3. Create conda environment
+Install Necessary Libraries:-
 ```
-conda env create -f environment.yml
+!pip install torch torchvision numpy scipy tqdm
 ```
-This will:
 
-- Read the environment.yml file.
-- Install the specified dependencies and libraries in the environment.
+# Dataset
+I used Kaggle for downloading dataset here is the link https://www.kaggle.com/datasets/arnaud58/selfie2anime
+You must have a kaggle API key to download this dataset. Follow the notebook to download the dataset.
 ```
-conda activate <environment_name>
+!mkdir outputs
+!python dataset_tool.py --source=/content/selfie2anime/processed_anime_images --dest=anime_tfrecords --resolution=256x256
 ```
-Replace <environment_name> with the name of the environment specified in the environment.yml file. In our case environment name is stylegan3.
+# Training the Model
+Once your dataset is ready create a folder output in stylegan3 folder, this folder contain the final model, images etc.
+```
+!python train.py --outdir=/content/stylegan3/outputs \
+                 --cfg=stylegan3-t \
+                 --data=anime_tfrecords \
+                 --gpus=1 \
+                 --batch=8 \
+                 --snap=10 \
+                 --gamma=5 \
+                 --kimg=5000 \
+                 --metrics=fid50k_full
+```
+
+
+
