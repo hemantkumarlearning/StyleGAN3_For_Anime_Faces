@@ -23,7 +23,7 @@ The process involves:
 # Installation
 ## 1. Clone the repository
 ```
-git clone https://github.com/your-username/anime-face-gan.git
+git clone https://github.com/hemantkumarlearning/StyleGAN3_For_Anime_Faces.git
 cd anime-face-gan
 ```
 Now you have the jupyter notebook
