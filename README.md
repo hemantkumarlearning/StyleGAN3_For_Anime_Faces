@@ -39,12 +39,16 @@ Install Necessary Libraries:-
 ```
 
 # Dataset
-I used Kaggle for downloading dataset here is the link https://www.kaggle.com/datasets/arnaud58/selfie2anime
-You must have a kaggle API key to download this dataset. Follow the notebook to download the dataset.
+I used Kaggle for downloading dataset here is the link https://www.kaggle.com/datasets/arnaud58/selfie2anime.
+You must have a kaggle API key to download this dataset. Follow the notebook to download and preprocess the dataset.
+
+The dataset contain 4 folder test A, test B, train A, train B. Remove all folders except train B and rename the folder to images.
+Now convert images into tfrecords using this :-
 ```
 !mkdir outputs
 !python dataset_tool.py --source=/content/selfie2anime/processed_anime_images --dest=anime_tfrecords --resolution=256x256
 ```
+
 # Training the Model
 Once your dataset is ready create a folder output in stylegan3 folder, this folder contain the final model, images etc.
 ```
