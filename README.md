@@ -24,6 +24,7 @@ The process involves:
 ## 1. Clone the repository
 ```
 git clone https://github.com/hemantkumarlearning/StyleGAN3_For_Anime_Faces.git
+cd StyleGAN3_For_Anime_Faces
 ```
 Now you have the jupyter notebook
 
